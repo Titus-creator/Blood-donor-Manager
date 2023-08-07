@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376787726082",
+    "project_id": "blood-donor-request-gh",
+    "storage_bucket": "blood-donor-request-gh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376787726082:android:34abdba50ae2a270d55c1b",
+        "android_client_info": {
+          "package_name": "com.example.blood_bridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376787726082-bjb09sqqqrvic2peqlkhcc0kjd3juhc3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBorsu0Y1DE01bIkgECjmCZVxjAnpj-Ozk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376787726082-bjb09sqqqrvic2peqlkhcc0kjd3juhc3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

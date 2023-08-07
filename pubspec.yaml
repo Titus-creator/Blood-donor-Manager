@@ -1,0 +1,58 @@
+name: Blood donor Manger
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  flutter_riverpod: ^2.3.6
+  flutter_smart_dialog: ^4.9.3+2
+  google_fonts: ^4.0.2
+  firebase_auth: ^4.7.1
+  firebase_core: ^2.15.0
+  cloud_firestore: ^4.8.3
+  firebase_storage: ^11.2.5
+  material_design_icons_flutter: ^7.0.7296
+  image_picker: ^0.8.9
+  intl: ^0.18.1
+  animated_bottom_navigation_bar: ^1.2.0
+  place_picker: ^0.10.0
+  badges: ^3.1.1
+  url_launcher: ^6.1.12
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_native_splash: ^2.3.1
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/logos/
+
+
+flutter_native_splash:
+  color: "#ffffff"
+  color_dark: "#ffffff"
+  image_dark: assets/logos/logo_normal.png
+  icon_background_color_dark: "#ffffff"
+  image: assets/logos/logo_normal.png
+  android: true
+  ios: true
+  fullscreen: true
+  android_12:
+    image: assets/logos/logo_android_12.png
+    icon_background_color: "#ffffff"
+    image_dark: assets/logos/logo_android_12.png
+    icon_background_color_dark: "#ffffff"
