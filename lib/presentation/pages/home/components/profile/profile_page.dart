@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
 import '../../../../../core/components/widgets/smart_dialog.dart';
 import '../../../../../models/user_model.dart';
 import '../../../../../core/functions.dart';
@@ -26,8 +24,8 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     var user = ref.watch(userProvider);
-     var donorList = ref.watch(myDonationListStreamProvider);
-     var requestList= ref.watch(myRequestListStreamProvider);
+    var donorList = ref.watch(myDonationListStreamProvider);
+    var requestList = ref.watch(myRequestListStreamProvider);
     var size = MediaQuery.of(context).size;
     return Column(children: [
       Container(
@@ -81,72 +79,74 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                       ),
                       Row(
                         children: [
-                         donorList.when(
-                          data: (data){
-                             return Expanded(
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 5),
-                                  decoration: const BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: primaryColor, width: 5))),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        '10',
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey),
-                                      ),
-                                      Text(
-                                        'Donations',
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black87),
-                                      ),
-                                    ],
-                                  ),
+                          Expanded(
+                            child: donorList.when(data: (data) {
+                              return Container(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 5),
+                                decoration: const BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: primaryColor, width: 5))),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      '${data.length}',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                    ),
+                                    Text(
+                                      'Donations',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  ],
                                 ),
                               );
-                          },
-                           loading: (){
+                            }, loading: () {
                               return const LinearProgressIndicator();
-                            
-                           },
-                            error: (e, s) {
+                            }, error: (e, s) {
                               return const Text('Error getting your Donations');
-                            
-                            }
+                            }),
                           ),
-                          const Spacer(),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 35, vertical: 5),
-                            decoration: const BoxDecoration(
-                                border: Border(
-                                    bottom: BorderSide(
-                                        color: secondaryColor, width: 5))),
-                            child: Column(
-                              children: [
-                                Text(
-                                  '2',
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.grey),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: requestList.when(data: (data) {
+                              return Container(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 5),
+                                decoration: const BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: secondaryColor, width: 5))),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      '${data.length}',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                    ),
+                                    Text(
+                                      'Requested',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  'Requested',
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87),
-                                ),
-                              ],
-                            ),
+                              );
+                            }, loading: () {
+                              return const LinearProgressIndicator();
+                            }, error: (e, s) {
+                              return const Text('Error getting your Requests');
+                            }),
                           )
                         ],
                       ),

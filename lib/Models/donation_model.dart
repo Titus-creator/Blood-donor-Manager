@@ -101,7 +101,7 @@ class DonationModel {
       patientImage: map['patientImage'] != null ? map['patientImage'] as String : null,
       donorImage: map['donorImage'] != null ? map['donorImage'] as String : null,
       bloodGroup: map['bloodGroup'] != null ? map['bloodGroup'] as String : null,
-      bloodQuantity: map['bloodQuantity'] != null ? map['bloodQuantity'] as double : null,
+      bloodQuantity: map['bloodQuantity'] != null ? double.parse(map['bloodQuantity'].toString())  : null,
       hospitalName: map['hospitalName'] != null ? map['hospitalName'] as String : null,
     );
   }
