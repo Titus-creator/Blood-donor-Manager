@@ -1,13 +1,14 @@
-import 'package:blood_bridge/core/components/constants/enums.dart';
-import 'package:blood_bridge/core/components/constants/strings.dart';
-import 'package:blood_bridge/core/components/widgets/custom_checkbox.dart';
-import 'package:blood_bridge/core/components/widgets/custom_input.dart';
-import 'package:blood_bridge/core/components/widgets/smart_dialog.dart';
-import 'package:blood_bridge/state/request_data_state.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../../../../../core/components/constants/enums.dart';
+import '../../../../../core/components/constants/strings.dart';
+import '../../../../../core/components/widgets/custom_checkbox.dart';
+import '../../../../../core/components/widgets/custom_input.dart';
+import '../../../../../core/components/widgets/smart_dialog.dart';
+import '../../../../../state/request_data_state.dart';
 import '../../../../../styles/styles.dart';
 
 class BloodInfoPage extends ConsumerStatefulWidget {

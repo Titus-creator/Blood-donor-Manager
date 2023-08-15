@@ -1,22 +1,22 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:blood_bridge/generated/assets.dart';
-import 'package:blood_bridge/presentation/pages/home/components/home.dart';
-import 'package:blood_bridge/presentation/pages/home/components/request_page/request_page.dart';
-import 'package:blood_bridge/styles/colors.dart';
-import 'package:blood_bridge/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import '../../../Models/user_model.dart';
+import '../../../generated/assets.dart';
+import '../../../models/user_model.dart';
 import '../../../core/components/widgets/smart_dialog.dart';
 import '../../../core/functions.dart';
 import '../../../services/firebase_auth.dart';
 import '../../../state/data_flow.dart';
 import '../../../state/navigation.dart';
+import '../../../styles/colors.dart';
+import '../../../styles/styles.dart';
 import '../authentication/auth_main_page.dart';
 import 'components/history/history_page.dart';
+import 'components/home.dart';
 import 'components/profile/profile_page.dart';
+import 'components/request_page/request_page.dart';
 
 class HomeMainPage extends ConsumerStatefulWidget {
   const HomeMainPage({super.key});

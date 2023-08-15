@@ -15,6 +15,7 @@ class DonationModel {
   String? donorImage;
   String? bloodGroup;
   double? bloodQuantity;
+  String? hospitalName;
   DonationModel({
     this.id,
     this.donorId,
@@ -29,7 +30,9 @@ class DonationModel {
     this.donorImage,
     this.bloodGroup,
     this.bloodQuantity,
+    this.hospitalName,
   });
+
 
   DonationModel copyWith({
     String? id,
@@ -45,6 +48,7 @@ class DonationModel {
     String? donorImage,
     String? bloodGroup,
     double? bloodQuantity,
+    String? hospitalName,
   }) {
     return DonationModel(
       id: id ?? this.id,
@@ -60,6 +64,7 @@ class DonationModel {
       donorImage: donorImage ?? this.donorImage,
       bloodGroup: bloodGroup ?? this.bloodGroup,
       bloodQuantity: bloodQuantity ?? this.bloodQuantity,
+      hospitalName: hospitalName ?? this.hospitalName,
     );
   }
 
@@ -78,6 +83,7 @@ class DonationModel {
       'donorImage': donorImage,
       'bloodGroup': bloodGroup,
       'bloodQuantity': bloodQuantity,
+      'hospitalName': hospitalName,
     };
   }
 
@@ -91,67 +97,64 @@ class DonationModel {
       createdAt: map['createdAt'] != null ? map['createdAt'] as int : null,
       status: map['status'] != null ? map['status'] as String : null,
       donorName: map['donorName'] != null ? map['donorName'] as String : null,
-      patientName:
-          map['patientName'] != null ? map['patientName'] as String : null,
-      patientImage:
-          map['patientImage'] != null ? map['patientImage'] as String : null,
-      donorImage:
-          map['donorImage'] != null ? map['donorImage'] as String : null,
-      bloodGroup:
-          map['bloodGroup'] != null ? map['bloodGroup'] as String : null,
-      bloodQuantity:
-          map['bloodQuantity'] != null ? map['bloodQuantity'] as double : null,
+      patientName: map['patientName'] != null ? map['patientName'] as String : null,
+      patientImage: map['patientImage'] != null ? map['patientImage'] as String : null,
+      donorImage: map['donorImage'] != null ? map['donorImage'] as String : null,
+      bloodGroup: map['bloodGroup'] != null ? map['bloodGroup'] as String : null,
+      bloodQuantity: map['bloodQuantity'] != null ? map['bloodQuantity'] as double : null,
+      hospitalName: map['hospitalName'] != null ? map['hospitalName'] as String : null,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory DonationModel.fromJson(String source) =>
-      DonationModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory DonationModel.fromJson(String source) => DonationModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
-    return 'DonationModel(id: $id, donorId: $donorId, requestId: $requestId, date: $date, time: $time, createdAt: $createdAt, status: $status, donorName: $donorName, patientName: $patientName, patientImage: $patientImage, donorImage: $donorImage, bloodGroup: $bloodGroup, bloodQuantity: $bloodQuantity)';
+    return 'DonationModel(id: $id, donorId: $donorId, requestId: $requestId, date: $date, time: $time, createdAt: $createdAt, status: $status, donorName: $donorName, patientName: $patientName, patientImage: $patientImage, donorImage: $donorImage, bloodGroup: $bloodGroup, bloodQuantity: $bloodQuantity, hospitalName: $hospitalName)';
   }
 
   @override
   bool operator ==(covariant DonationModel other) {
     if (identical(this, other)) return true;
-
-    return other.id == id &&
-        other.donorId == donorId &&
-        other.requestId == requestId &&
-        other.date == date &&
-        other.time == time &&
-        other.createdAt == createdAt &&
-        other.status == status &&
-        other.donorName == donorName &&
-        other.patientName == patientName &&
-        other.patientImage == patientImage &&
-        other.donorImage == donorImage &&
-        other.bloodGroup == bloodGroup &&
-        other.bloodQuantity == bloodQuantity;
+  
+    return 
+      other.id == id &&
+      other.donorId == donorId &&
+      other.requestId == requestId &&
+      other.date == date &&
+      other.time == time &&
+      other.createdAt == createdAt &&
+      other.status == status &&
+      other.donorName == donorName &&
+      other.patientName == patientName &&
+      other.patientImage == patientImage &&
+      other.donorImage == donorImage &&
+      other.bloodGroup == bloodGroup &&
+      other.bloodQuantity == bloodQuantity &&
+      other.hospitalName == hospitalName;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-        donorId.hashCode ^
-        requestId.hashCode ^
-        date.hashCode ^
-        time.hashCode ^
-        createdAt.hashCode ^
-        status.hashCode ^
-        donorName.hashCode ^
-        patientName.hashCode ^
-        patientImage.hashCode ^
-        donorImage.hashCode ^
-        bloodGroup.hashCode ^
-        bloodQuantity.hashCode;
+      donorId.hashCode ^
+      requestId.hashCode ^
+      date.hashCode ^
+      time.hashCode ^
+      createdAt.hashCode ^
+      status.hashCode ^
+      donorName.hashCode ^
+      patientName.hashCode ^
+      patientImage.hashCode ^
+      donorImage.hashCode ^
+      bloodGroup.hashCode ^
+      bloodQuantity.hashCode ^
+      hospitalName.hashCode;
   }
 
   DonationModel clear() {
-    //set all values to null
     return DonationModel(
       id: null,
       donorId: null,
@@ -166,6 +169,7 @@ class DonationModel {
       donorImage: null,
       bloodGroup: null,
       bloodQuantity: null,
+      hospitalName: null,
     );
   }
 }

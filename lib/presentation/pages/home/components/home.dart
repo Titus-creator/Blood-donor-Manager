@@ -1,5 +1,5 @@
-import 'package:blood_bridge/presentation/pages/home/components/request_page/widgets/request_card.dart';
-import 'package:blood_bridge/styles/styles.dart';
+
+import 'package:blood_donor_manger/presentation/pages/home/components/request_page/widgets/request_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -7,6 +7,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../../../../core/components/widgets/custom_input.dart';
 import '../../../../state/request_data_state.dart';
 import '../../../../styles/colors.dart';
+import '../../../../styles/styles.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});

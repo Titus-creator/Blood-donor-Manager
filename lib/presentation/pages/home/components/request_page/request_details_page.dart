@@ -1,20 +1,20 @@
-import 'package:blood_bridge/core/components/widgets/custom_button.dart';
-import 'package:blood_bridge/core/functions.dart';
-import 'package:blood_bridge/presentation/pages/home/donation/donation_list.dart';
-import 'package:blood_bridge/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:badges/badges.dart' as badges;
-import '../../../../../Models/request_model.dart';
-import '../../../../../Models/user_model.dart';
+import '../../../../../core/components/widgets/custom_button.dart';
+import '../../../../../core/functions.dart';
+import '../../../../../models/request_model.dart';
+import '../../../../../models/user_model.dart';
 import '../../../../../core/components/widgets/smart_dialog.dart';
 import '../../../../../generated/assets.dart';
 import '../../../../../state/data_flow.dart';
 import '../../../../../state/donation_data_state.dart';
 import '../../../../../state/request_data_state.dart';
+import '../../../../../styles/colors.dart';
 import '../../../../../styles/styles.dart';
+import '../../donation/donation_list.dart';
 import '../../donation/donation_page.dart';
 
 class RequestDetailsPage extends ConsumerStatefulWidget {
@@ -31,7 +31,6 @@ class _RequestDetailsPageState extends ConsumerState<RequestDetailsPage> {
     var request = ref.watch(selectedRequest(widget.requestId));
     final user = UserModel.fromMap(request!.requester!);
     final thisUser = ref.watch(userProvider);
-    var donationsList = ref.watch(donationListStreamProvider(request.id!));
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -39,47 +38,6 @@ class _RequestDetailsPageState extends ConsumerState<RequestDetailsPage> {
           style: GoogleFonts.lato(fontWeight: FontWeight.bold),
         ),
         actions: [
-          if (user.uid == thisUser.uid)
-            //show budge of number of donors
-            InkWell(
-              onTap: () {
-                //show list of donors
-              },
-              child: LayoutBuilder(builder: (context, constraint) {
-                return donationsList.when(data: (data) {
-                  var pendingDonations = data
-                      .where((element) => element.status == 'Pending')
-                      .toList();
-                  if (pendingDonations.isEmpty) {
-                    return const SizedBox();
-                  }
-                  return badges.Badge(
-                      badgeAnimation: const badges.BadgeAnimation.rotation(
-                        animationDuration: Duration(seconds: 1),
-                        colorChangeAnimationDuration: Duration(seconds: 1),
-                        loopAnimation: false,
-                        curve: Curves.fastOutSlowIn,
-                        colorChangeAnimationCurve: Curves.easeInCubic,
-                      ),
-                      badgeContent: Text(
-                        pendingDonations.length.toString(),
-                        style: normalText(color: Colors.white),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(5),
-                        child:
-                            Image.asset(Assets.logosIco, height: 25, width: 25),
-                      ));
-                }, error: (error, stack) {
-                  return const SizedBox();
-                }, loading: () {
-                  return const SizedBox(
-                      height: 25,
-                      width: 25,
-                      child: CircularProgressIndicator());
-                });
-              }),
-            ),
           const SizedBox(width: 10),
           if (user.uid == thisUser.uid)
             PopupMenuButton(
@@ -89,39 +47,31 @@ class _RequestDetailsPageState extends ConsumerState<RequestDetailsPage> {
                 icon: Icon(MdiIcons.dotsVertical),
                 itemBuilder: (context) {
                   return [
-                    PopupMenuItem(
-                      value: 'completed',
-                      child: Row(
-                        children: [
-                          Icon(MdiIcons.check, size: 18),
-                          const SizedBox(width: 10),
-                          const Text('Mark as completed'),
-                        ],
+                    if (request.status == 'Pending')
+                      PopupMenuItem(
+                        value: 'edit',
+                        child: Row(
+                          children: [
+                            Icon(
+                              MdiIcons.pencil,
+                              size: 18,
+                            ),
+                            const SizedBox(width: 10),
+                            const Text('Edit'),
+                          ],
+                        ),
                       ),
-                    ),
-                    PopupMenuItem(
-                      value: 'edit',
-                      child: Row(
-                        children: [
-                          Icon(
-                            MdiIcons.pencil,
-                            size: 18,
-                          ),
-                          const SizedBox(width: 10),
-                          const Text('Edit'),
-                        ],
+                    if (request.status == 'Pending')
+                      PopupMenuItem(
+                        value: 'Delete',
+                        child: Row(
+                          children: [
+                            Icon(MdiIcons.delete, size: 18),
+                            const SizedBox(width: 10),
+                            const Text('Delete'),
+                          ],
+                        ),
                       ),
-                    ),
-                    PopupMenuItem(
-                      value: 'Delete',
-                      child: Row(
-                        children: [
-                          Icon(MdiIcons.delete, size: 18),
-                          const SizedBox(width: 10),
-                          const Text('Delete'),
-                        ],
-                      ),
-                    ),
                   ];
                 })
         ],
@@ -234,42 +184,7 @@ class _RequestDetailsPageState extends ConsumerState<RequestDetailsPage> {
                                   fontSize: 25, fontWeight: FontWeight.w800),
                             ),
                             const Spacer(),
-                            Container(
-                                width: 30,
-                                height: 30,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                    image: user.profileUrl != null
-                                        ? DecorationImage(
-                                            image:
-                                                NetworkImage(user.profileUrl!),
-                                            fit: BoxFit.cover)
-                                        : null,
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(5)),
-                                child: user.profileUrl == null
-                                    ? Icon(
-                                        MdiIcons.account,
-                                        size: 50,
-                                      )
-                                    : null),
-                            //add call button
-                            const SizedBox(width: 10),
-                            InkWell(
-                              onTap: () {},
-                              child: Container(
-                                width: 30,
-                                height: 30,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: secondaryColor,
-                                ),
-                                alignment: Alignment.center,
-                                child:
-                                    Icon(MdiIcons.phone, color: Colors.white),
-                              ),
-                            )
-                          ],
+                             ],
                         ),
                         const SizedBox(height: 15),
                         if (!request.isCompleted!)
@@ -319,19 +234,7 @@ class _RequestDetailsPageState extends ConsumerState<RequestDetailsPage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Patient Name:', style: normalText()),
-                                  Text(
-                                    request.patientName!,
-                                    style:
-                                        normalText(fontWeight: FontWeight.w700),
-                                  ),
-                                  const SizedBox(height: 5),
-                                  Text('Patient Age:', style: normalText()),
-                                  Text(
-                                    request.patientAge!,
-                                    style:
-                                        normalText(fontWeight: FontWeight.w700),
-                                  ),
+                                
                                   const SizedBox(height: 5),
                                   Text('Hospital: ', style: normalText()),
                                   Text(
@@ -343,23 +246,24 @@ class _RequestDetailsPageState extends ConsumerState<RequestDetailsPage> {
                                 ],
                               ),
                             ),
-                            if (request.patientImage != null)
-                              InkWell(
-                                onTap: () {
-                                  //Todo: show image in full screen
-                                },
-                                child: Container(
-                                  width: 150,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: NetworkImage(
-                                              request.patientImage!),
-                                          fit: BoxFit.cover),
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(5)),
-                                ),
-                              )
+                           // if (request.patientImage != null)
+                              // InkWell(
+                              //   onTap: () {
+                              //     CustomDialog.showImageDialog(
+                              //       path: request.patientImage!);
+                              //   },
+                              //   child: Container(
+                              //     width: 150,
+                              //     height: 180,
+                              //     decoration: BoxDecoration(
+                              //         image: DecorationImage(
+                              //             image: NetworkImage(
+                              //                 request.patientImage!),
+                              //             fit: BoxFit.cover),
+                              //         color: Colors.white,
+                              //         borderRadius: BorderRadius.circular(5)),
+                              //   ),
+                              // )
                           ],
                         ),
 
@@ -428,92 +332,94 @@ class _RequestDetailsPageState extends ConsumerState<RequestDetailsPage> {
               ),
             ),
             //donors in wrap
-            if (request.donors != null && request.donors!.isNotEmpty)
-              Card(
-                elevation: 5,
-                color: Colors.white,
-                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Donors',
-                              style: GoogleFonts.lato(
-                                  fontSize: 18, fontWeight: FontWeight.w700),
-                            ),
-                            //view all donors
-                            TextButton(
-                                onPressed: () {
-                                  sendToPage(
-                                      context, DonationListPage('', request));
-                                },
-                                child: const Text('View all'))
-                          ],
-                        ),
-                        const Divider(),
-                        const SizedBox(height: 10),
-                        LayoutBuilder(builder: (context, constraints) {
-                          var donorList = ref
-                              .watch(donationListStreamProvider(request.id!));
-                          return donorList.when(data: (data) {
-                            return Wrap(
-                              children: data
-                                  .map((e) => Container(
-                                        width: 50,
-                                        height: 50,
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 15, vertical: 5),
-                                        margin: const EdgeInsets.all(2),
-                                        decoration: BoxDecoration(
-                                            color: secondaryColor,
-                                            image: e.donorImage != null
-                                                ? DecorationImage(
-                                                    image: NetworkImage(
-                                                        e.donorImage!),
-                                                    fit: BoxFit.cover)
-                                                : null,
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: e.donorImage == null
-                                            ? Center(
-                                                child: Text(
-                                                  getFirstLetters(e.donorName!),
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w700),
-                                                ),
-                                              )
-                                            : null,
-                                      ))
-                                  .toList(),
-                            );
-                          }, error: (error, stackTrace) {
-                            return Text(
-                              'Something went wrong',
-                              style: normalText(color: Colors.grey),
-                            );
-                          }, loading: () {
-                            return const SizedBox(
-                              height: 20,
-                              width: 20,
-                              child: CircularProgressIndicator(),
-                            );
-                          });
-                        }),
-                      ]),
-                ),
-              ),
+            // if (request.donors != null && request.donors!.isNotEmpty)
+            //   Card(
+            //     elevation: 5,
+            //     color: Colors.white,
+            //     margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            //     child: Container(
+            //       decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(10),
+            //           color: Colors.white),
+            //       padding:
+            //           const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            //       child: Column(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           children: [
+            //             Row(
+            //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //               children: [
+            //                 Text(
+            //                   'Donors',
+            //                   style: GoogleFonts.lato(
+            //                       fontSize: 18, fontWeight: FontWeight.w700),
+            //                 ),
+            //                 //view all donors
+            //                 TextButton(
+            //                     onPressed: () {
+            //                       sendToPage(
+            //                           context, DonationListPage('', request));
+            //                     },
+            //                     child: const Text('View all'))
+            //               ],
+            //             ),
+            //             const Divider(),
+            //             const SizedBox(height: 10),
+            //             LayoutBuilder(builder: (context, constraints) {
+            //               var donorList = ref
+            //                   .watch(donationListStreamProvider(request.id!));
+            //               return donorList.when(data: (data) {
+            //                 return Wrap(
+            //                   children: data
+            //                       .map((e) => Container(
+            //                             width: 50,
+            //                             height: 50,
+            //                             padding: const EdgeInsets.symmetric(
+            //                                 horizontal: 15, vertical: 5),
+            //                             margin: const EdgeInsets.all(2),
+            //                             decoration: BoxDecoration(
+            //                                 color: secondaryColor,
+            //                                 image: e.donorImage != null
+            //                                     ? DecorationImage(
+            //                                         image: NetworkImage(
+            //                                             e.donorImage!),
+            //                                         fit: BoxFit.cover)
+            //                                     : null,
+            //                                 borderRadius:
+            //                                     BorderRadius.circular(10)),
+            //                             child: e.donorImage == null
+            //                                 ? Center(
+            //                                     child: Text(
+            //                                       getFirstLetters(e.donorName!),
+            //                                       style: GoogleFonts.poppins(
+            //                                           fontSize: 16,
+            //                                           color: Colors.white,
+            //                                           fontWeight:
+            //                                               FontWeight.w700),
+            //                                     ),
+            //                                   )
+            //                                 : null,
+            //                           ))
+            //                       .toList(),
+            //                 );
+            //               }, error: (error, stackTrace) {
+            //                 return Text(
+            //                   'Something went wrong',
+            //                   style: normalText(color: Colors.grey),
+            //                 );
+            //               }, loading: () {
+            //                 return const SizedBox(
+            //                   height: 20,
+            //                   width: 20,
+            //                   child: CircularProgressIndicator(),
+            //                 );
+            //               });
+            //             }),
+            //           ]),
+            //     ),
+            //   ),
+          
+          
           ],
         ),
       ),

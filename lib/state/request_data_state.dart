@@ -1,9 +1,9 @@
 import 'dart:io';
-import 'package:blood_bridge/core/components/widgets/smart_dialog.dart';
-import 'package:blood_bridge/services/firebase_fireStore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../Models/request_model.dart';
+import '../core/components/widgets/smart_dialog.dart';
+import '../models/request_model.dart';
+import '../services/firebase_fireStore.dart';
 import '../services/firebase_storage.dart';
 import 'data_flow.dart';
 import 'navigation.dart';
@@ -74,7 +74,7 @@ class NewRequestState extends StateNotifier<RequestModel> {
     state = state.copyWith(requester: user.toMap());
     state = state.copyWith(requesterId: user.uid);
     state = state.copyWith(donors: []);
-    state = state.copyWith(isCompleted: false);
+    state = state.copyWith(isCompleted: false,status: 'Pending');
     state = state.copyWith(id: FireStoreServices.getDocumentId('requests'));
     state = state.copyWith(
         createdAt: DateTime.now().toUtc().millisecondsSinceEpoch);
@@ -109,14 +109,13 @@ class NewRequestState extends StateNotifier<RequestModel> {
 
   void resetState() {
     state = state.clear();
-  }
-
+  }  
   void delete(String? id) {
     CustomDialog.dismiss();
     CustomDialog.showLoading(message: 'Deleting request...');
     FireStoreServices.deleteRequest(id!).then((value) {
       CustomDialog.dismiss();
-      CustomDialog.showSuccess(
+      CustomDialog.showSuccess(  
         title: 'Success',
         message: 'Request deleted successfully',
       );
@@ -151,9 +150,10 @@ final requestListStreamProvider =
   final requestStream = FireStoreServices.getRequestStream();
   ref.onDispose(() => requestStream.drain());
   await for (var request in requestStream) {
-    yield request.docs.map((e) => RequestModel.fromMap(e.data())).toList();
+    var date= request.docs.map((e) => RequestModel.fromMap(e.data())).toList();
+    yield date.where((element) => element.status=='Published').toList( );
   }
-});
+}); 
 final selectedRequest = ProviderFamily<RequestModel?, String>((ref, requestId) {
   var requests = ref.watch(requestListStreamProvider);
   var request = RequestModel();
@@ -181,4 +181,14 @@ final requestsFilteredListProvider = Provider<List<RequestModel>>((ref) {
         .toList();
   });
   return requestList;
+});
+
+final myRequestListStreamProvider =
+    StreamProvider<List<RequestModel>>((ref) async* {
+  final requestStream = FireStoreServices.getRequestStream();
+  ref.onDispose(() => requestStream.drain());
+  await for (var request in requestStream) {
+    var date= request.docs.map((e) => RequestModel.fromMap(e.data())).toList();
+    yield date.where((element) => element.requesterId==ref.read(userProvider).uid).toList( );
+  }
 });

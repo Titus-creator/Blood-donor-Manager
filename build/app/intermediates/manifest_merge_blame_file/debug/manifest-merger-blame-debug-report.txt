@@ -1,0 +1,367 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.blood_bridge"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="20"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:4:5-67
+15-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:4:22-64
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:2:2-76
+16-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:2:19-73
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:3:5-81
+17-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:3:22-78
+18    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+18-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:5:5-85
+18-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:5:22-82
+19    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+19-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:6:5-77
+19-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:6:22-74
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:7:5-79
+20-->C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\AndroidManifest.xml:7:22-76
+21
+22    <uses-feature
+22-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+23        android:glEsVersion="0x00020000"
+23-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+24        android:required="true" />
+24-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+25
+26    <queries>
+26-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
+27
+28        <!-- Needs to be explicitly declared on Android R+ -->
+29        <package android:name="com.google.android.apps.maps" />
+29-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+29-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+30    </queries>
+31
+32    <permission
+32-->[androidx.core:core:1.10.1] C:\Users\emman\.gradle\caches\transforms-3\bc5d6fa4677997613f59bab17c47d535\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+33        android:name="com.example.blood_bridge.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+33-->[androidx.core:core:1.10.1] C:\Users\emman\.gradle\caches\transforms-3\bc5d6fa4677997613f59bab17c47d535\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+34        android:protectionLevel="signature" />
+34-->[androidx.core:core:1.10.1] C:\Users\emman\.gradle\caches\transforms-3\bc5d6fa4677997613f59bab17c47d535\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+35
+36    <uses-permission android:name="com.example.blood_bridge.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+36-->[androidx.core:core:1.10.1] C:\Users\emman\.gradle\caches\transforms-3\bc5d6fa4677997613f59bab17c47d535\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+36-->[androidx.core:core:1.10.1] C:\Users\emman\.gradle\caches\transforms-3\bc5d6fa4677997613f59bab17c47d535\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+37
+38    <application
+39        android:name="android.app.Application"
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.10.1] C:\Users\emman\.gradle\caches\transforms-3\bc5d6fa4677997613f59bab17c47d535\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:icon="@mipmap/ic_launcher"
+43        android:label="Blood Donor Manager" >
+44        <meta-data
+45            android:name="com.google.android.geo.API_KEY"
+46            android:value="AIzaSyDCrr9WfKYWDiwo89lykYCWP6TsyDwNQtI" />
+47
+48        <activity
+49            android:name="com.example.blood_bridge.MainActivity"
+50            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+51            android:exported="true"
+52            android:hardwareAccelerated="true"
+53            android:launchMode="singleTop"
+54            android:theme="@style/LaunchTheme"
+55            android:windowSoftInputMode="adjustResize" >
+56
+57            <!--
+58                 Specifies an Android theme to apply to this Activity as soon as
+59                 the Android process has started. This theme is visible to the user
+60                 while the Flutter UI initializes. After that, this theme continues
+61                 to determine the Window background behind the Flutter UI.
+62            -->
+63            <meta-data
+64                android:name="io.flutter.embedding.android.NormalTheme"
+65                android:resource="@style/NormalTheme" />
+66
+67            <intent-filter>
+68                <action android:name="android.intent.action.MAIN" />
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+71            </intent-filter>
+72        </activity>
+73        <!--
+74             Don't delete the meta-data below.
+75             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+76        -->
+77        <meta-data
+78            android:name="flutterEmbedding"
+79            android:value="2" />
+80
+81        <service
+81-->[:firebase_auth] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+82            android:name="com.google.firebase.components.ComponentDiscoveryService"
+82-->[:firebase_auth] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+83            android:directBootAware="true"
+83-->[com.google.firebase:firebase-common:20.3.3] C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:34:13-43
+84            android:exported="false" >
+84-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:68:13-37
+85            <meta-data
+85-->[:firebase_auth] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+86                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+86-->[:firebase_auth] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+87                android:value="com.google.firebase.components.ComponentRegistrar" />
+87-->[:firebase_auth] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+88            <meta-data
+88-->[:firebase_storage] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+89                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+89-->[:firebase_storage] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[:firebase_storage] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+91            <meta-data
+91-->[:cloud_firestore] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+92-->[:cloud_firestore] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[:cloud_firestore] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+94            <meta-data
+94-->[:firebase_core] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+95-->[:firebase_core] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[:firebase_core] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+97            <meta-data
+97-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:69:13-71:85
+98                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+98-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:70:17-109
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:71:17-82
+100            <meta-data
+100-->[com.google.firebase:firebase-firestore:24.7.0] C:\Users\emman\.gradle\caches\transforms-3\2f8a76ac12adf7c694585ad64741d48d\transformed\jetified-firebase-firestore-24.7.0\AndroidManifest.xml:19:13-21:85
+101                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+101-->[com.google.firebase:firebase-firestore:24.7.0] C:\Users\emman\.gradle\caches\transforms-3\2f8a76ac12adf7c694585ad64741d48d\transformed\jetified-firebase-firestore-24.7.0\AndroidManifest.xml:20:17-111
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-firestore:24.7.0] C:\Users\emman\.gradle\caches\transforms-3\2f8a76ac12adf7c694585ad64741d48d\transformed\jetified-firebase-firestore-24.7.0\AndroidManifest.xml:21:17-82
+103            <meta-data
+103-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\emman\.gradle\caches\transforms-3\79a302699be692725f7a8b26476a73e4\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:32:13-34:85
+104                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+104-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\emman\.gradle\caches\transforms-3\79a302699be692725f7a8b26476a73e4\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:33:17-107
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\emman\.gradle\caches\transforms-3\79a302699be692725f7a8b26476a73e4\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:34:17-82
+106        </service>
+107        <service
+107-->[:geolocator_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:56
+108            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+108-->[:geolocator_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-77
+109            android:enabled="true"
+109-->[:geolocator_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-35
+110            android:exported="false"
+110-->[:geolocator_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-37
+111            android:foregroundServiceType="location" />
+111-->[:geolocator_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-53
+112
+113        <provider
+113-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+114            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+114-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+115            android:authorities="com.example.blood_bridge.flutter.image_provider"
+115-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+116            android:exported="false"
+116-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+117            android:grantUriPermissions="true" >
+117-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+118            <meta-data
+118-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+119                android:name="android.support.FILE_PROVIDER_PATHS"
+119-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+120                android:resource="@xml/flutter_image_picker_file_paths" />
+120-->[:image_picker_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+121        </provider>
+122
+123        <activity
+123-->[:url_launcher_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+124            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+124-->[:url_launcher_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+125            android:exported="false"
+125-->[:url_launcher_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+126            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /> <!-- Needs to be explicitly declared on P+ -->
+126-->[:url_launcher_android] C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+127        <uses-library
+127-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+128            android:name="org.apache.http.legacy"
+128-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+129            android:required="false" />
+129-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+130
+131        <activity
+131-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:29:9-46:20
+132            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+132-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:30:13-80
+133            android:excludeFromRecents="true"
+133-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:31:13-46
+134            android:exported="true"
+134-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:32:13-36
+135            android:launchMode="singleTask"
+135-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:33:13-44
+136            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+136-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:34:13-72
+137            <intent-filter>
+137-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:35:13-45:29
+138                <action android:name="android.intent.action.VIEW" />
+138-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:36:17-69
+138-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:36:25-66
+139
+140                <category android:name="android.intent.category.DEFAULT" />
+140-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:38:17-76
+140-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:38:27-73
+141                <category android:name="android.intent.category.BROWSABLE" />
+141-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:39:17-78
+141-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:39:27-75
+142
+143                <data
+143-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:41:17-44:51
+144                    android:host="firebase.auth"
+144-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:42:21-49
+145                    android:path="/"
+145-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:43:21-37
+146                    android:scheme="genericidp" />
+146-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:44:21-48
+147            </intent-filter>
+148        </activity>
+149        <activity
+149-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:47:9-64:20
+150            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+150-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:48:13-79
+151            android:excludeFromRecents="true"
+151-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:49:13-46
+152            android:exported="true"
+152-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:50:13-36
+153            android:launchMode="singleTask"
+153-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:51:13-44
+154            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+154-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:52:13-72
+155            <intent-filter>
+155-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:53:13-63:29
+156                <action android:name="android.intent.action.VIEW" />
+156-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:36:17-69
+156-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:36:25-66
+157
+158                <category android:name="android.intent.category.DEFAULT" />
+158-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:38:17-76
+158-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:38:27-73
+159                <category android:name="android.intent.category.BROWSABLE" />
+159-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:39:17-78
+159-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:39:27-75
+160
+161                <data
+161-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:41:17-44:51
+162                    android:host="firebase.auth"
+162-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:42:21-49
+163                    android:path="/"
+163-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:43:21-37
+164                    android:scheme="recaptcha" />
+164-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\emman\.gradle\caches\transforms-3\efad1e5e97a20dbb7905761a2b74e36e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:44:21-48
+165            </intent-filter>
+166        </activity>
+167        <activity
+167-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\aba88a4f907fe8bfdb6fd74360c6e684\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+168            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+168-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\aba88a4f907fe8bfdb6fd74360c6e684\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+169            android:exported="false"
+169-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\aba88a4f907fe8bfdb6fd74360c6e684\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+170            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+170-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\aba88a4f907fe8bfdb6fd74360c6e684\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+171
+172        <provider
+172-->[com.google.firebase:firebase-common:20.3.3] C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:25:9-30:39
+173            android:name="com.google.firebase.provider.FirebaseInitProvider"
+173-->[com.google.firebase:firebase-common:20.3.3] C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:26:13-77
+174            android:authorities="com.example.blood_bridge.firebaseinitprovider"
+174-->[com.google.firebase:firebase-common:20.3.3] C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:27:13-72
+175            android:directBootAware="true"
+175-->[com.google.firebase:firebase-common:20.3.3] C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:28:13-43
+176            android:exported="false"
+176-->[com.google.firebase:firebase-common:20.3.3] C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:29:13-37
+177            android:initOrder="100" />
+177-->[com.google.firebase:firebase-common:20.3.3] C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:30:13-36
+178
+179        <meta-data
+179-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\45e7651ed3fb9fe94b969c9e9e2dab3c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+180            android:name="com.google.android.gms.version"
+180-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\45e7651ed3fb9fe94b969c9e9e2dab3c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+181            android:value="@integer/google_play_services_version" />
+181-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\emman\.gradle\caches\transforms-3\45e7651ed3fb9fe94b969c9e9e2dab3c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+182
+183        <uses-library
+183-->[androidx.window:window:1.0.0-beta04] C:\Users\emman\.gradle\caches\transforms-3\2f87c7344050ef1edad59575619e3b30\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+184            android:name="androidx.window.extensions"
+184-->[androidx.window:window:1.0.0-beta04] C:\Users\emman\.gradle\caches\transforms-3\2f87c7344050ef1edad59575619e3b30\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+185            android:required="false" />
+185-->[androidx.window:window:1.0.0-beta04] C:\Users\emman\.gradle\caches\transforms-3\2f87c7344050ef1edad59575619e3b30\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+186        <uses-library
+186-->[androidx.window:window:1.0.0-beta04] C:\Users\emman\.gradle\caches\transforms-3\2f87c7344050ef1edad59575619e3b30\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+187            android:name="androidx.window.sidecar"
+187-->[androidx.window:window:1.0.0-beta04] C:\Users\emman\.gradle\caches\transforms-3\2f87c7344050ef1edad59575619e3b30\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+188            android:required="false" />
+188-->[androidx.window:window:1.0.0-beta04] C:\Users\emman\.gradle\caches\transforms-3\2f87c7344050ef1edad59575619e3b30\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+189
+190        <provider
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+191            android:name="androidx.startup.InitializationProvider"
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+192            android:authorities="com.example.blood_bridge.androidx-startup"
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+193            android:exported="false" >
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+194            <meta-data
+194-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+195                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+196                android:value="androidx.startup" />
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+197        </provider>
+198
+199        <receiver
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+200            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+200-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+201            android:directBootAware="false"
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+202            android:enabled="true"
+202-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+203            android:exported="true"
+203-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+204            android:permission="android.permission.DUMP" >
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+205            <intent-filter>
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+206                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+206-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+206-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+207            </intent-filter>
+208            <intent-filter>
+208-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+209                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+210            </intent-filter>
+211            <intent-filter>
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+212                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+212-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+212-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+213            </intent-filter>
+214            <intent-filter>
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+215                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+215-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+215-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+216            </intent-filter>
+217        </receiver>
+218    </application>
+219
+220</manifest>

@@ -1,9 +1,10 @@
-import 'package:blood_bridge/Models/request_model.dart';
-import 'package:blood_bridge/core/components/widgets/smart_dialog.dart';
-import 'package:blood_bridge/services/firebase_fireStore.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../Models/donation_model.dart';
+import '../core/components/widgets/smart_dialog.dart';
+import '../models/donation_model.dart';
+import '../models/request_model.dart';
+import '../services/firebase_fireStore.dart';
 import 'data_flow.dart';
 
 final newDonationProvider =
@@ -32,7 +33,7 @@ class NewDonationStateNotifier extends StateNotifier<DonationModel> {
       RequestModel model, WidgetRef ref, BuildContext context) async {
     CustomDialog.showLoading(message: 'Submitting donation request');
     var user = ref.watch(userProvider);
-    state = state.copyWith(requestId: model.id);
+    state = state.copyWith(requestId: model.id,hospitalName: model.hospitalName);
     state = state.copyWith(id: FireStoreServices.getDocumentId('donations'));
     state = state.copyWith(status: 'Pending');
     state = state.copyWith(bloodQuantity: 0);

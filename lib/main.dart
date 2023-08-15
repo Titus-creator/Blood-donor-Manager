@@ -1,17 +1,19 @@
-import 'package:blood_bridge/presentation/pages/authentication/auth_main_page.dart';
-import 'package:blood_bridge/presentation/pages/home/home_main_page.dart';
-import 'package:blood_bridge/services/firebase_auth.dart';
-import 'package:blood_bridge/services/firebase_fireStore.dart';
-import 'package:blood_bridge/state/data_flow.dart';
-import 'package:blood_bridge/styles/colors.dart';
+
+import 'package:blood_donor_manger/presentation/pages/authentication/auth_main_page.dart';
+import 'package:blood_donor_manger/presentation/pages/home/home_main_page.dart';
+import 'package:blood_donor_manger/services/firebase_auth.dart';
+import 'package:blood_donor_manger/services/firebase_fireStore.dart';
+import 'package:blood_donor_manger/state/data_flow.dart';
+import 'package:blood_donor_manger/styles/colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'Models/user_model.dart';
+import 'models/user_model.dart';
 import 'core/components/widgets/smart_dialog.dart';
-import 'firebase_options.dart';
+import 'firebase_options.dart'; 
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

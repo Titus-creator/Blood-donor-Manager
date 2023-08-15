@@ -19,12 +19,11 @@ class UserModel {
   List<String>? medicalHistory;
   String? vaccination;
   String? genotype;
-
 // user address info
   String? address;
   String? region;
   String? city;
-
+  String? status;
   int? createdAt;
   UserModel({
     this.uid,
@@ -44,8 +43,10 @@ class UserModel {
     this.address,
     this.region,
     this.city,
+    this.status,
     this.createdAt,
   });
+  
 
   UserModel copyWith({
     String? uid,
@@ -65,6 +66,7 @@ class UserModel {
     String? address,
     String? region,
     String? city,
+    String? status,
     int? createdAt,
   }) {
     return UserModel(
@@ -85,6 +87,7 @@ class UserModel {
       address: address ?? this.address,
       region: region ?? this.region,
       city: city ?? this.city,
+      status: status ?? this.status,
       createdAt: createdAt ?? this.createdAt,
     );
   }
@@ -108,6 +111,7 @@ class UserModel {
       'address': address,
       'region': region,
       'city': city,
+      'status': status,
       'createdAt': createdAt,
     };
   }
@@ -118,81 +122,79 @@ class UserModel {
       name: map['name'] != null ? map['name'] as String : null,
       email: map['email'] != null ? map['email'] as String : null,
       phone: map['phone'] != null ? map['phone'] as String : null,
-      profileUrl:
-          map['profileUrl'] != null ? map['profileUrl'] as String : null,
+      profileUrl: map['profileUrl'] != null ? map['profileUrl'] as String : null,
       password: map['password'] != null ? map['password'] as String : null,
       dob: map['dob'] != null ? map['dob'] as String : null,
       gender: map['gender'] != null ? map['gender'] as String : null,
-      bloodGroup:
-          map['bloodGroup'] != null ? map['bloodGroup'] as String : null,
+      bloodGroup: map['bloodGroup'] != null ? map['bloodGroup'] as String : null,
       height: map['height'] != null ? map['height'] as double : null,
       weight: map['weight'] != null ? map['weight'] as double : null,
-      medicalHistory: map['medicalHistory'] != null
-          ? List<String>.from((map['medicalHistory'] as List<String>))
-          : null,
-      vaccination:
-          map['vaccination'] != null ? map['vaccination'] as String : null,
+      medicalHistory: map['medicalHistory'] != null ? List<String>.from((map['medicalHistory'] as List<String>) ): null,
+      vaccination: map['vaccination'] != null ? map['vaccination'] as String : null,
       genotype: map['genotype'] != null ? map['genotype'] as String : null,
       address: map['address'] != null ? map['address'] as String : null,
       region: map['region'] != null ? map['region'] as String : null,
       city: map['city'] != null ? map['city'] as String : null,
+      status: map['status'] != null ? map['status'] as String : null,
       createdAt: map['createdAt'] != null ? map['createdAt'] as int : null,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory UserModel.fromJson(String source) =>
-      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory UserModel.fromJson(String source) => UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
-    return 'UserModel(uid: $uid, name: $name, email: $email, phone: $phone, profileUrl: $profileUrl, password: $password, dob: $dob, gender: $gender, bloodGroup: $bloodGroup, height: $height, weight: $weight, medicalHistory: $medicalHistory, vaccination: $vaccination, genotype: $genotype, address: $address, region: $region, city: $city, createdAt: $createdAt)';
+    return 'UserModel(uid: $uid, name: $name, email: $email, phone: $phone, profileUrl: $profileUrl, password: $password, dob: $dob, gender: $gender, bloodGroup: $bloodGroup, height: $height, weight: $weight, medicalHistory: $medicalHistory, vaccination: $vaccination, genotype: $genotype, address: $address, region: $region, city: $city, status: $status, createdAt: $createdAt)';
   }
 
   @override
   bool operator ==(covariant UserModel other) {
     if (identical(this, other)) return true;
-
-    return other.uid == uid &&
-        other.name == name &&
-        other.email == email &&
-        other.phone == phone &&
-        other.profileUrl == profileUrl &&
-        other.password == password &&
-        other.dob == dob &&
-        other.gender == gender &&
-        other.bloodGroup == bloodGroup &&
-        other.height == height &&
-        other.weight == weight &&
-        listEquals(other.medicalHistory, medicalHistory) &&
-        other.vaccination == vaccination &&
-        other.genotype == genotype &&
-        other.address == address &&
-        other.region == region &&
-        other.city == city &&
-        other.createdAt == createdAt;
+  
+    return 
+      other.uid == uid &&
+      other.name == name &&
+      other.email == email &&
+      other.phone == phone &&
+      other.profileUrl == profileUrl &&
+      other.password == password &&
+      other.dob == dob &&
+      other.gender == gender &&
+      other.bloodGroup == bloodGroup &&
+      other.height == height &&
+      other.weight == weight &&
+      listEquals(other.medicalHistory, medicalHistory) &&
+      other.vaccination == vaccination &&
+      other.genotype == genotype &&
+      other.address == address &&
+      other.region == region &&
+      other.city == city &&
+      other.status == status &&
+      other.createdAt == createdAt;
   }
 
   @override
   int get hashCode {
     return uid.hashCode ^
-        name.hashCode ^
-        email.hashCode ^
-        phone.hashCode ^
-        profileUrl.hashCode ^
-        password.hashCode ^
-        dob.hashCode ^
-        gender.hashCode ^
-        bloodGroup.hashCode ^
-        height.hashCode ^
-        weight.hashCode ^
-        medicalHistory.hashCode ^
-        vaccination.hashCode ^
-        genotype.hashCode ^
-        address.hashCode ^
-        region.hashCode ^
-        city.hashCode ^
-        createdAt.hashCode;
+      name.hashCode ^
+      email.hashCode ^
+      phone.hashCode ^
+      profileUrl.hashCode ^
+      password.hashCode ^
+      dob.hashCode ^
+      gender.hashCode ^
+      bloodGroup.hashCode ^
+      height.hashCode ^
+      weight.hashCode ^
+      medicalHistory.hashCode ^
+      vaccination.hashCode ^
+      genotype.hashCode ^
+      address.hashCode ^
+      region.hashCode ^
+      city.hashCode ^
+      status.hashCode ^
+      createdAt.hashCode;
   }
 }

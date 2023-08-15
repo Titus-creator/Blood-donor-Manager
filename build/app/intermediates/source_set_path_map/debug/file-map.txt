@@ -1,0 +1,39 @@
+com.example.blood_bridge.app-jetified-profileinstaller-1.3.0-0 C:\Users\emman\.gradle\caches\transforms-3\14334f9056b97a33cc31c6702a777e1b\transformed\jetified-profileinstaller-1.3.0\res
+com.example.blood_bridge.app-browser-1.4.0-1 C:\Users\emman\.gradle\caches\transforms-3\239d9baf63db34dbcf8a03e9e33b3dd1\transformed\browser-1.4.0\res
+com.example.blood_bridge.app-jetified-window-1.0.0-beta04-2 C:\Users\emman\.gradle\caches\transforms-3\2f87c7344050ef1edad59575619e3b30\transformed\jetified-window-1.0.0-beta04\res
+com.example.blood_bridge.app-jetified-window-java-1.0.0-beta04-3 C:\Users\emman\.gradle\caches\transforms-3\33becc8f7e36a53ce20798cca7b8ce41\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.blood_bridge.app-jetified-play-services-basement-18.1.0-4 C:\Users\emman\.gradle\caches\transforms-3\45e7651ed3fb9fe94b969c9e9e2dab3c\transformed\jetified-play-services-basement-18.1.0\res
+com.example.blood_bridge.app-jetified-firebase-common-20.3.3-5 C:\Users\emman\.gradle\caches\transforms-3\4918bc3869786ef9c1199e17b40ea1db\transformed\jetified-firebase-common-20.3.3\res
+com.example.blood_bridge.app-jetified-core-ktx-1.10.1-6 C:\Users\emman\.gradle\caches\transforms-3\4cdac57c9ee499aa73c5b536b4287bfa\transformed\jetified-core-ktx-1.10.1\res
+com.example.blood_bridge.app-jetified-startup-runtime-1.1.1-7 C:\Users\emman\.gradle\caches\transforms-3\533cd2ee56fd5a40e26fdceda67e306d\transformed\jetified-startup-runtime-1.1.1\res
+com.example.blood_bridge.app-lifecycle-livedata-2.6.1-8 C:\Users\emman\.gradle\caches\transforms-3\613f055d27e203d936458d118074420b\transformed\lifecycle-livedata-2.6.1\res
+com.example.blood_bridge.app-jetified-lifecycle-viewmodel-savedstate-2.6.1-9 C:\Users\emman\.gradle\caches\transforms-3\6a7ad7682cdd387e1ffa99002e3b1df7\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.1\res
+com.example.blood_bridge.app-core-runtime-2.2.0-10 C:\Users\emman\.gradle\caches\transforms-3\6ff16ae8a35a6644c091f32ff87b4a64\transformed\core-runtime-2.2.0\res
+com.example.blood_bridge.app-lifecycle-viewmodel-2.6.1-11 C:\Users\emman\.gradle\caches\transforms-3\8caeabf246ee931316570c750cad6563\transformed\lifecycle-viewmodel-2.6.1\res
+com.example.blood_bridge.app-jetified-annotation-experimental-1.3.0-12 C:\Users\emman\.gradle\caches\transforms-3\998460220c0fcfb22c545c9fa46e43bf\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.blood_bridge.app-jetified-play-services-base-18.1.0-13 C:\Users\emman\.gradle\caches\transforms-3\aba88a4f907fe8bfdb6fd74360c6e684\transformed\jetified-play-services-base-18.1.0\res
+com.example.blood_bridge.app-jetified-activity-1.7.2-14 C:\Users\emman\.gradle\caches\transforms-3\bba79c09efbbaed9c763799a2c16eb06\transformed\jetified-activity-1.7.2\res
+com.example.blood_bridge.app-core-1.10.1-15 C:\Users\emman\.gradle\caches\transforms-3\bc5d6fa4677997613f59bab17c47d535\transformed\core-1.10.1\res
+com.example.blood_bridge.app-jetified-play-services-maps-18.1.0-16 C:\Users\emman\.gradle\caches\transforms-3\d453b53f2ac50e768589cf92d8d048fc\transformed\jetified-play-services-maps-18.1.0\res
+com.example.blood_bridge.app-lifecycle-livedata-core-2.6.1-17 C:\Users\emman\.gradle\caches\transforms-3\dbd509afb46ed1d7c4eaa144649a3709\transformed\lifecycle-livedata-core-2.6.1\res
+com.example.blood_bridge.app-lifecycle-runtime-2.6.1-18 C:\Users\emman\.gradle\caches\transforms-3\eb77d52315a13c9e7fd2889a548231b6\transformed\lifecycle-runtime-2.6.1\res
+com.example.blood_bridge.app-jetified-savedstate-1.2.1-19 C:\Users\emman\.gradle\caches\transforms-3\f59789fc8a074450a7f909075c2dddf0\transformed\jetified-savedstate-1.2.1\res
+com.example.blood_bridge.app-debug-20 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\debug\res
+com.example.blood_bridge.app-main-21 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\android\app\src\main\res
+com.example.blood_bridge.app-pngs-22 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\app\generated\res\pngs\debug
+com.example.blood_bridge.app-resValues-23 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\app\generated\res\resValues\debug
+com.example.blood_bridge.app-rs-24 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\app\generated\res\rs\debug
+com.example.blood_bridge.app-mergeDebugResources-25 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.blood_bridge.app-mergeDebugResources-26 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.blood_bridge.app-merged_res-27 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\app\intermediates\merged_res\debug
+com.example.blood_bridge.app-packaged_res-28 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\cloud_firestore\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-29 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_auth\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-30 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_core\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-31 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\firebase_storage\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-32 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\flutter_native_splash\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-33 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-34 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\geolocator_android\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-35 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\google_maps_flutter_android\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-36 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\image_picker_android\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-37 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\path_provider_android\intermediates\packaged_res\debug
+com.example.blood_bridge.app-packaged_res-38 C:\Users\emman\OneDrive\Documents\GitHub\Blood donor Manager\build\url_launcher_android\intermediates\packaged_res\debug

@@ -1,9 +1,10 @@
-import 'package:blood_bridge/Models/donation_model.dart';
-import 'package:blood_bridge/core/components/widgets/smart_dialog.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../core/components/widgets/smart_dialog.dart';
 import '../../../../core/functions.dart';
+import '../../../../models/donation_model.dart';
 import '../../../../services/firebase_fireStore.dart';
 
 class DonorCard extends StatefulWidget {

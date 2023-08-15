@@ -1,22 +1,23 @@
-import 'package:blood_bridge/Models/request_model.dart';
-import 'package:blood_bridge/Models/user_model.dart';
-import 'package:blood_bridge/core/components/widgets/custom_button.dart';
-import 'package:blood_bridge/core/components/widgets/smart_dialog.dart';
-import 'package:blood_bridge/core/functions.dart';
-import 'package:blood_bridge/generated/assets.dart';
-import 'package:blood_bridge/presentation/pages/home/components/request_page/request_details_page.dart';
-import 'package:blood_bridge/presentation/pages/home/donation/donation_list.dart';
-import 'package:blood_bridge/styles/colors.dart';
-import 'package:blood_bridge/styles/styles.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:badges/badges.dart' as badges;
+import '../../../../../../core/components/widgets/custom_button.dart';
+import '../../../../../../core/components/widgets/smart_dialog.dart';
+import '../../../../../../core/functions.dart';
+import '../../../../../../generated/assets.dart';
+import '../../../../../../models/request_model.dart';
+import '../../../../../../models/user_model.dart';
 import '../../../../../../state/data_flow.dart';
 import '../../../../../../state/donation_data_state.dart';
 import '../../../../../../state/request_data_state.dart';
+import '../../../../../../styles/colors.dart';
+import '../../../../../../styles/styles.dart';
+import '../../../donation/donation_list.dart';
 import '../../../donation/donation_page.dart';
+import '../request_details_page.dart';
 
 class RequestCard extends ConsumerStatefulWidget {
   const RequestCard(this.request, {super.key});
@@ -143,44 +144,8 @@ class _RequestCardState extends ConsumerState<RequestCard> {
                               ),
                             ];
                           }),
-                    if (user.uid != thisUser.uid)
-                      Container(
-                          width: 30,
-                          height: 30,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              image: user.profileUrl != null
-                                  ? DecorationImage(
-                                      image: NetworkImage(user.profileUrl!),
-                                      fit: BoxFit.cover)
-                                  : null,
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(5)),
-                          child: user.profileUrl == null
-                              ? Icon(
-                                  MdiIcons.account,
-                                  size: 50,
-                                )
-                              : null),
-                    //add call button
-                    const SizedBox(width: 10),
-                    if (user.uid != thisUser.uid)
-                      InkWell(
-                        onTap: () {
-                          launchUri(user.phone!, 'phone');
-                        },
-                        child: Container(
-                          width: 30,
-                          height: 30,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: secondaryColor,
-                          ),
-                          alignment: Alignment.center,
-                          child: Icon(MdiIcons.phone, color: Colors.white),
-                        ),
-                      )
-                  ],
+                    
+                    ],
                 ),
                 const SizedBox(height: 15),
                 if (!widget.request.isCompleted!)
@@ -224,18 +189,7 @@ class _RequestCardState extends ConsumerState<RequestCard> {
                     ],
                   ),
                 const SizedBox(height: 15),
-                Text('Patient Name: ${widget.request.patientName}',
-                    style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black45)),
-                const SizedBox(height: 2),
-                Text('Patient Age: ${widget.request.patientAge}',
-                    style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black45)),
-                const SizedBox(height: 2),
+               
                 //blood needed
                 Text(
                     'Blood Needed: ${widget.request.bloodNeeded} Pines (${widget.request.bloodNeeded! - widget.request.bloodDonated!} Pines left)',
