@@ -1,7 +1,8 @@
-import 'package:blood_bridge/styles/styles.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../state/data_flow.dart';
+import '../../styles/styles.dart';
 
 class QuoteCard extends ConsumerWidget {
   const QuoteCard({super.key});

@@ -1,11 +1,13 @@
-import 'package:blood_bridge/core/components/widgets/custom_button.dart';
-import 'package:blood_bridge/core/components/widgets/custom_input.dart';
-import 'package:blood_bridge/state/request_data_state.dart';
-import 'package:blood_bridge/styles/colors.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:place_picker/place_picker.dart';
+
+import '../../../../../core/components/widgets/custom_button.dart';
+import '../../../../../core/components/widgets/custom_input.dart';
+import '../../../../../state/request_data_state.dart';
+import '../../../../../styles/colors.dart';
 
 class HospitalInfoPage extends ConsumerStatefulWidget {
   const HospitalInfoPage({super.key});

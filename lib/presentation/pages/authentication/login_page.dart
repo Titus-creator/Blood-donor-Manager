@@ -1,15 +1,16 @@
-import 'package:blood_bridge/core/components/widgets/custom_input.dart';
-import 'package:blood_bridge/state/data_flow.dart';
-import 'package:blood_bridge/state/navigation.dart';
-import 'package:blood_bridge/styles/styles.dart';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../../../core/components/constants/strings.dart';
 import '../../../core/components/widgets/custom_button.dart';
+import '../../../core/components/widgets/custom_input.dart';
 import '../../../generated/assets.dart';
+import '../../../state/data_flow.dart';
+import '../../../state/navigation.dart';
 import '../../../styles/colors.dart';
+import '../../../styles/styles.dart';
 
 class LoginPage extends ConsumerStatefulWidget {
   const LoginPage({super.key});

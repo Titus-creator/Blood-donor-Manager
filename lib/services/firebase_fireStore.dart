@@ -1,9 +1,10 @@
 // ignore_for_file: file_names
 
-import 'package:blood_bridge/Models/donation_model.dart';
-import 'package:blood_bridge/Models/request_model.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../Models/donation_model.dart';
+import '../Models/request_model.dart';
 import '../Models/user_model.dart';
 
 class FireStoreServices {

@@ -1,17 +1,17 @@
 import 'dart:io';
 import 'dart:math';
-import 'package:blood_bridge/core/components/widgets/smart_dialog.dart';
-import 'package:blood_bridge/services/firebase_auth.dart';
-import 'package:blood_bridge/services/firebase_storage.dart';
-import 'package:blood_bridge/state/navigation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../Models/user_model.dart';
 import '../core/components/constants/strings.dart';
+import '../core/components/widgets/smart_dialog.dart';
 import '../core/functions.dart';
 import '../presentation/pages/home/home_main_page.dart';
+import '../services/firebase_auth.dart';
 import '../services/firebase_fireStore.dart';
+import '../services/firebase_storage.dart';
+import 'navigation.dart';
 
 final userProvider = StateNotifierProvider<UserNotifier, UserModel>((ref) {
   return UserNotifier();

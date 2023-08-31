@@ -1,7 +1,4 @@
-import 'package:blood_bridge/core/components/widgets/custom_button.dart';
-import 'package:blood_bridge/core/functions.dart';
-import 'package:blood_bridge/presentation/pages/home/donation/donation_list.dart';
-import 'package:blood_bridge/styles/colors.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,12 +6,16 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:badges/badges.dart' as badges;
 import '../../../../../Models/request_model.dart';
 import '../../../../../Models/user_model.dart';
+import '../../../../../core/components/widgets/custom_button.dart';
 import '../../../../../core/components/widgets/smart_dialog.dart';
+import '../../../../../core/functions.dart';
 import '../../../../../generated/assets.dart';
 import '../../../../../state/data_flow.dart';
 import '../../../../../state/donation_data_state.dart';
 import '../../../../../state/request_data_state.dart';
+import '../../../../../styles/colors.dart';
 import '../../../../../styles/styles.dart';
+import '../../donation/donation_list.dart';
 import '../../donation/donation_page.dart';
 
 class RequestDetailsPage extends ConsumerStatefulWidget {

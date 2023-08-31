@@ -1,15 +1,16 @@
-import 'package:blood_bridge/core/components/widgets/smart_dialog.dart';
-import 'package:blood_bridge/state/data_flow.dart';
-import 'package:blood_bridge/styles/colors.dart';
-import 'package:blood_bridge/styles/styles.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../../../../Models/user_model.dart';
+import '../../../../../core/components/widgets/smart_dialog.dart';
 import '../../../../../core/functions.dart';
 import '../../../../../services/firebase_auth.dart';
+import '../../../../../state/data_flow.dart';
+import '../../../../../styles/colors.dart';
+import '../../../../../styles/styles.dart';
 import '../../../authentication/auth_main_page.dart';
 
 class ProfilePage extends ConsumerStatefulWidget {

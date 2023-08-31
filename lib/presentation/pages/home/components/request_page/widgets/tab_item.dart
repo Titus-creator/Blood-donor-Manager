@@ -1,6 +1,8 @@
-import 'package:blood_bridge/styles/styles.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../../../../styles/styles.dart';
 
 class TabItem extends ConsumerWidget {
   const TabItem(

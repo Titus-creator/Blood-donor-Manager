@@ -1,10 +1,11 @@
-import 'package:blood_bridge/presentation/pages/home/components/request_page/patient_info.dart';
-import 'package:blood_bridge/presentation/pages/home/components/request_page/widgets/tab_item.dart';
-import 'package:blood_bridge/styles/styles.dart';
+
+import 'package:blood_donor_manger/presentation/pages/home/components/request_page/patient_info.dart';
+import 'package:blood_donor_manger/presentation/pages/home/components/request_page/widgets/tab_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../state/request_data_state.dart';
+import '../../../../../styles/styles.dart';
 import 'blood_info.dart';
 import 'hospital_info.dart';
 
